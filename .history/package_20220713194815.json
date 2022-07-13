@@ -1,0 +1,22 @@
+{
+  "name": "mybooks",
+  "version": "1.0.0",
+  "description": "my books repo",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy":"del -rf gh_pages && gitbook build && mkdir gh_pages && cp -r _book/* gh_pages/ && cd gh_pages && git init && git remote add origin git@github.com:z3mu/gitbook-tutorial.git && git checkout -b gh-pages && git add . && git commit -m 'Publish book' && git push -f --set-upstream origin gh-pages"
+  },
+  "author": "renxin",
+  "license": "ISC",
+  "dependencies": {
+    "g": "^2.0.1",
+    "gh-pages": "^4.0.0",
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-search-pro2": "^1.0.1"
+  }
+}
